@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pwd.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboukhal <mboukhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mait-aad <mait-aad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 11:15:17 by mboukhal          #+#    #+#             */
-/*   Updated: 2022/08/09 18:56:41 by mboukhal         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:26:43 by mait-aad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ char	*ft_pwd(void)
 	}
 	printf("%s\n", tmp);
 	free(tmp);
+	g_data.ret_val = 0;
 	return (0);
 }

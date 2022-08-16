@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboukhal <mboukhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mait-aad <mait-aad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 23:42:32 by mait-aad          #+#    #+#             */
-/*   Updated: 2022/08/06 19:01:03 by mboukhal         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:31:12 by mait-aad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,15 @@ void	add2(char	**data)
 	while (data[++i])
 	{
 		if (chack_var(data[i]) == 1)
+		{
 			g_data.env = add(data[i]);
+			g_data.ret_val = 0;
+		}
 		else
+		{
 			printf("minishell: export: `%s': not a valid identifier\n", data[i]);
+			g_data.ret_val = 1;
+		}
 	}
 }
 

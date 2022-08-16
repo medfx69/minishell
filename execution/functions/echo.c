@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   echo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboukhal <mboukhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mait-aad <mait-aad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:42:48 by mait-aad          #+#    #+#             */
-/*   Updated: 2022/08/14 15:36:29 by mboukhal         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:28:00 by mait-aad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_echo(char	**inputs, int newlin)
 		else
 			printf("%s", inputs[i]);
 	}
+	g_data.ret_val = 0;
 	if (newlin == 0)
 		return (0);
 	printf("\n");

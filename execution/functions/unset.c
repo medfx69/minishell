@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   unset.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboukhal <mboukhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mait-aad <mait-aad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:17:13 by mait-aad          #+#    #+#             */
-/*   Updated: 2022/08/14 16:04:08 by mboukhal         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:27:20 by mait-aad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ char	*ft_unset(char	**para)
 			g_data.env = rm_va(para[i]);
 		else if (chack_var(para[i]) == 0)
 		{
+			g_data.ret_val = 1;
 			printf("minishell: unset: `%s': not a valid identifier\n", para[i]);
 			return (0);
 		}
